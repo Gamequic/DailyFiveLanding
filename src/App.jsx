@@ -9,13 +9,11 @@ ReactGA.send("pageview");
 import MainPage from "./Pages/MainPage";
 
 import "./App.css";
-import Subrogates from './Pages/Subrogates';
 
 function App() {
   return (
     <Routes>
       <Route path="" element={<MainPage />} />
-      <Route path="/Subrogates" element={<Subrogates />} />
     </Routes>
   );
 }

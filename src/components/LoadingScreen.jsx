@@ -18,7 +18,7 @@ const LoadingScreen = ({ isLoading }) => {
     <div className="fixed inset-0 flex items-center justify-center z-50 overflow-hidden">
       {/* Fondo azul (se desliza primero) */}
       <motion.div
-        className="slide-bg fixed inset-0"
+        className="slide-bg bg-orange-100 fixed inset-0"
         initial={{ x: 0 }}
         animate={isLoading ? { x: 0 } : { x: "-100%" }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -29,7 +29,7 @@ const LoadingScreen = ({ isLoading }) => {
         className="slide-black fixed inset-0"
         initial={{ x: 0 }}
         animate={isLoading ? { x: 0 } : { x: "100%" }}
-        transition={{ duration: 0.6, ease: "easeInOut"}}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
       />
 
       {/* Loader (siempre visible hasta el final) */}
@@ -42,8 +42,13 @@ const LoadingScreen = ({ isLoading }) => {
         style={{ pointerEvents: isLoading ? "auto" : "none" }}
       >
         <div className="flex flex-col items-center">
-          <div className="loader"></div>
-          <p className="mt-4 text-lg font-semibold">Loading...</p>
+          {/* Reemplazamos el loader cuadrado por el favicon animado */}
+          <img
+            src="/assets/favicon.ico"
+            alt="Loading icon"
+            className="loader"
+          />
+          <p className="mt-4 text-lg text-neutral-900 font-semibold">Cargando...</p>
         </div>
       </motion.div>
     </div>

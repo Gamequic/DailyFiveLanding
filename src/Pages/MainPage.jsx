@@ -36,15 +36,15 @@ export default function MainPage() {
 
     <section
       ref={sections.home}
-      className="content-section flex flex-col h-[33vh] bg-teal-200 relative"
+      className="content-section flex flex-col h-[20vh] bg-teal-200 relative"
     >
       {/* Imagen que se mantiene en su lugar en pantallas grandes */}
       <div className="
-          w-screen h-[33vh]
+          w-screen h-[20vh]
         "
       >
         <img 
-          className="background-video w-screen h-[33vh] object-cover"
+          className="background-video w-screen h-[20vh] object-cover"
           src="/assets/background2.png"
         />
       </div>
@@ -54,7 +54,7 @@ export default function MainPage() {
           w-1/2 text-gray-800 flex flex-col items-center justify-center 
           p-6 space-y-4
           absolute inset-0 bg-black/60 text-white
-          w-screen h-[33vh]
+          w-screen h-[20vh]
         "
       >
         <motion.h1
@@ -70,25 +70,31 @@ export default function MainPage() {
       </div>
       
       <motion.h1
-        className="text-center text-3xl md:text-5xl lg:text-6xl font-bold text-orange-400 mt-8"
+        className="text-center text-2xl md:text-3xl font-bold text-orange-400 mt-8"
         variants={fadeInAnimation}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 1 }}
       >
-        ¿Cuál es tu Top 5 de hoy?
+        ¿Qué es DailyFive?
       </motion.h1>
       <motion.p
-        className="text-center text-md font-bold text-teal-900 m-4"
+        className="text-center text-left text-sm font-bold text-teal-900 m-4"
         variants={fadeInAnimation}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 1 }}
       >
-        Responde temas diarios, crea tu ranking y compártelo con tus amigos.
+        DailyFive es tu dosis diaria de inspiración, descubrimiento y buena vibra.
+        Cada día te mostramos 5 cosas increíbles que deberías conocer:<br/>
+        📱 Apps que mejoran tu vida<br/>
+        🎧 Música que te mueve<br/>
+        💡 Ideas que te hacen pensar<br/>
+        🔥 Tendencias que no te puedes perder<br/>
+        Todo en un solo lugar, sin perder tiempo buscando.
       </motion.p>
       <motion.h2
-        className="text-center text-2xl font-bold text-orange-400 m-4"
+        className="text-center text-2xl md:text-3xl font-bold text-orange-400 mx-4"
         variants={fadeInAnimation}
         initial="hidden"
         whileInView="visible"
@@ -97,7 +103,7 @@ export default function MainPage() {
         ¿Cómo funciona?
       </motion.h2>
       <motion.div
-        className="text-md font-bold justify-center text-teal-900 m-4 space-y-3"
+        className="text-sm font-bold justify-center text-teal-900 m-4 space-y-3"
         variants={fadeInAnimation}
         initial="hidden"
         whileInView="visible"
@@ -108,11 +114,11 @@ export default function MainPage() {
           <span className="text-sm">Recibí un tema diario (ej: "Comidas") y elegí tu Top 5 de opciones (ej: "Pizza, Sushi, Tacos...").</span>
         </div>
         <div className="flex items-start justify-start gap-2 text-left">
-          <Share2 className="w-5 h-5 text-teal-700" />
+          <Share2 className="w-3 h-3 text-teal-700" />
           <span className="text-sm">Publicalo y compartilo con tus amigos.</span>
         </div>
         <div className="flex items-start justify-start gap-2 text-left">
-          <Globe className="w-5 h-5 text-teal-700" />
+          <Globe className="w-3 h-3 text-teal-700" />
           <span className="text-sm">Mirá lo que pusieron tus amigos y votá por los mejores.</span>
         </div>
       </motion.div>
